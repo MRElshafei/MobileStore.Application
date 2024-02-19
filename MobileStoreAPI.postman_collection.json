@@ -1,0 +1,1611 @@
+{
+	"info": {
+		"_postman_id": "b267b92a-ee27-4dc4-9ca8-6448b5035550",
+		"name": "MobileStoreAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15530046",
+		"_collection_link": "https://restless-satellite-582706.postman.co/workspace/MobileShop~908c4ca1-d150-47bb-9e4b-255960c0861d/collection/15530046-b267b92a-ee27-4dc4-9ca8-6448b5035550?action=share&source=collection_link&creator=15530046"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Categories",
+							"item": [
+								{
+									"name": "/api/Category/Categories",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJGaXJzdE5hbWUiOiJBZG1pbiIsIkxhc3ROYW1lIjoiVXNlciIsInJvbGUiOiJBZG1pbiIsImV4cCI6MTcwODM3MzEwOSwiaXNzIjoiU2VjdXJlQXBpIiwiYXVkIjoiU2VjdXJlQXBpVXNlciJ9.BCh38yHh5gEAFHs6JTRLv7YtlcQgbWPx2MTlCMsuXPs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseurl}}/api/Category/Categories",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"Category",
+												"Categories"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Category/Categories",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Category",
+														"Categories"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Category",
+							"item": [
+								{
+									"name": "/api/Category/Category",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Category/Category?id=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Category",
+												"Category"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Category/Category?id=<long>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Category",
+														"Category"
+													],
+													"query": [
+														{
+															"key": "id",
+															"value": "<long>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"categoryDTO\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/Category/Category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJGaXJzdE5hbWUiOiJNb2hhbWVkIiwiTGFzdE5hbWUiOiJSYWFmYXQiLCJyb2xlIjoiQWRtaW4iLCJleHAiOjE3MDgzNjUxMTEsImlzcyI6IlNlY3VyZUFwaSIsImF1ZCI6IlNlY3VyZUFwaVVzZXIifQ.n-5WWyBx16VWvm82iw6E8U7W7gDwVPdN0Z2HAu7ZIGU",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"Samsung\",\n  \"description\": \"Samsung Mobile\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Category/Category",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Category",
+												"Category"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Category/Category",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Category",
+														"Category"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								},
+								{
+									"name": "/api/Category/Category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJGaXJzdE5hbWUiOiJNb2hhbWVkIiwiTGFzdE5hbWUiOiJSYWFmYXQiLCJyb2xlIjoiQWRtaW4iLCJleHAiOjE3MDgzNjkwOTUsImlzcyI6IlNlY3VyZUFwaSIsImF1ZCI6IlNlY3VyZUFwaVVzZXIifQ.m-Of4eiq8JhHAPSQv57GI74hbSSqVzwGRhE1irax1G8",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"categoryId\": \"3\",\n  \"name\": \"Samsung\",\n  \"description\": \"Samsung\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Category/Category",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Category",
+												"Category"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"categoryId\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Category/Category",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Category",
+														"Category"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								},
+								{
+									"name": "/api/Category/Category",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Category/Category?id=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Category",
+												"Category"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Category/Category?id=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Category",
+														"Category"
+													],
+													"query": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Item",
+					"item": [
+						{
+							"name": "Items",
+							"item": [
+								{
+									"name": "/api/Item/Items",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJGaXJzdE5hbWUiOiJBZG1pbiIsIkxhc3ROYW1lIjoiVXNlciIsInJvbGUiOiJBZG1pbiIsImV4cCI6MTcwODM3MzEwOSwiaXNzIjoiU2VjdXJlQXBpIiwiYXVkIjoiU2VjdXJlQXBpVXNlciJ9.BCh38yHh5gEAFHs6JTRLv7YtlcQgbWPx2MTlCMsuXPs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Item/Items",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Item",
+												"Items"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Item/Items",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Item",
+														"Items"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "ItemsByCategory",
+							"item": [
+								{
+									"name": "/api/Item/ItemsByCategory",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJGaXJzdE5hbWUiOiJBZG1pbiIsIkxhc3ROYW1lIjoiVXNlciIsInJvbGUiOiJBZG1pbiIsImV4cCI6MTcwODM3MzEwOSwiaXNzIjoiU2VjdXJlQXBpIiwiYXVkIjoiU2VjdXJlQXBpVXNlciJ9.BCh38yHh5gEAFHs6JTRLv7YtlcQgbWPx2MTlCMsuXPs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Item/ItemsByCategory?Id=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Item",
+												"ItemsByCategory"
+											],
+											"query": [
+												{
+													"key": "Id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Item/ItemsByCategory?Id=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Item",
+														"ItemsByCategory"
+													],
+													"query": [
+														{
+															"key": "Id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "SearchItems",
+							"item": [
+								{
+									"name": "/api/Item/SearchItems",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjciLCJGaXJzdE5hbWUiOiJJc2xhbSIsIkxhc3ROYW1lIjoiQW1pbiIsInJvbGUiOiJVc2VyIiwiZXhwIjoxNzA4MzY1MTMyLCJpc3MiOiJTZWN1cmVBcGkiLCJhdWQiOiJTZWN1cmVBcGlVc2VyIn0.BuwmW19wwF8HR8Mp1JL_xQ88iEVmVRDIU1wE5uHAJlY",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Item/SearchItems?Name=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Item",
+												"SearchItems"
+											],
+											"query": [
+												{
+													"key": "Name",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Item/SearchItems?Name=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Item",
+														"SearchItems"
+													],
+													"query": [
+														{
+															"key": "Name",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"items\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"price\": \"<double>\",\n        \"image\": \"<string>\",\n        \"description\": \"<string>\",\n        \"categoryId\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"price\": \"<double>\",\n        \"image\": \"<string>\",\n        \"description\": \"<string>\",\n        \"categoryId\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    ]\n  },\n  {\n    \"items\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"price\": \"<double>\",\n        \"image\": \"<string>\",\n        \"description\": \"<string>\",\n        \"categoryId\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"price\": \"<double>\",\n        \"image\": \"<string>\",\n        \"description\": \"<string>\",\n        \"categoryId\": \"<integer>\",\n        \"quantity\": \"<integer>\"\n      }\n    ]\n  }\n]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Item",
+							"item": [
+								{
+									"name": "/api/Item/Item",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjciLCJGaXJzdE5hbWUiOiJJc2xhbSIsIkxhc3ROYW1lIjoiQW1pbiIsInJvbGUiOiJVc2VyIiwiZXhwIjoxNzA4MzY1MTMyLCJpc3MiOiJTZWN1cmVBcGkiLCJhdWQiOiJTZWN1cmVBcGlVc2VyIn0.BuwmW19wwF8HR8Mp1JL_xQ88iEVmVRDIU1wE5uHAJlY",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Item/Item?id=4",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Item",
+												"Item"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "4"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Item/Item?id=<long>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Item",
+														"Item"
+													],
+													"query": [
+														{
+															"key": "id",
+															"value": "<long>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"item\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"image\": \"<string>\",\n    \"description\": \"<string>\",\n    \"categoryId\": \"<integer>\",\n    \"quantity\": \"<integer>\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/Item/Item",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjciLCJGaXJzdE5hbWUiOiJJc2xhbSIsIkxhc3ROYW1lIjoiQW1pbiIsInJvbGUiOiJVc2VyIiwiZXhwIjoxNzA4MzY1MTMyLCJpc3MiOiJTZWN1cmVBcGkiLCJhdWQiOiJTZWN1cmVBcGlVc2VyIn0.BuwmW19wwF8HR8Mp1JL_xQ88iEVmVRDIU1wE5uHAJlY",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"categoryId\": \"3\",\n  \"description\": \"Samsung S24\",\n  \"name\": \"Samsung S24\",\n  \"price\": \"800000\",\n  \"quantity\": \"30\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Item/Item",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Item",
+												"Item"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"categoryId\": \"<integer>\",\n  \"description\": \"<string>\",\n  \"name\": \"<string>\",\n  \"price\": \"<integer>\",\n  \"quantity\": \"<integer>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Item/Item",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Item",
+														"Item"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								},
+								{
+									"name": "/api/Item/Item",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJGaXJzdE5hbWUiOiJNb2hhbWVkIiwiTGFzdE5hbWUiOiJSYWFmYXQiLCJyb2xlIjoiQWRtaW4iLCJleHAiOjE3MDgzNjUxMTEsImlzcyI6IlNlY3VyZUFwaSIsImF1ZCI6IlNlY3VyZUFwaVVzZXIifQ.n-5WWyBx16VWvm82iw6E8U7W7gDwVPdN0Z2HAu7ZIGU",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"itemId\": \"5\",\n  \"name\": \"Samsung S24\",\n  \"description\": \"Samsung S24\",\n  \"categoryId\": \"3\",\n  \"quantity\": \"35\",\n  \"price\": \"85000\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Item/Item",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Item",
+												"Item"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"itemId\": \"<long>\",\n  \"name\": \"<string>\",\n  \"imagefile\": \"<string>\",\n  \"description\": \"<string>\",\n  \"categoryId\": \"<integer>\",\n  \"quantity\": \"<integer>\",\n  \"price\": \"<double>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Item/Item",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Item",
+														"Item"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								},
+								{
+									"name": "/api/Item/Item",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjciLCJGaXJzdE5hbWUiOiJJc2xhbSIsIkxhc3ROYW1lIjoiQW1pbiIsInJvbGUiOiJVc2VyIiwiZXhwIjoxNzA4MzY1MTMyLCJpc3MiOiJTZWN1cmVBcGkiLCJhdWQiOiJTZWN1cmVBcGlVc2VyIn0.BuwmW19wwF8HR8Mp1JL_xQ88iEVmVRDIU1wE5uHAJlY",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Item/Item?id=3",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Item",
+												"Item"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Item/Item?id=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Item",
+														"Item"
+													],
+													"query": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "Orders",
+							"item": [
+								{
+									"name": "/api/Order/Orders",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjciLCJGaXJzdE5hbWUiOiJJc2xhbSIsIkxhc3ROYW1lIjoiQW1pbiIsInJvbGUiOiJVc2VyIiwiZXhwIjoxNzA4MzY5MDY0LCJpc3MiOiJTZWN1cmVBcGkiLCJhdWQiOiJTZWN1cmVBcGlVc2VyIn0.YYLA3I5DAA4Vs8Z11Z16j1JYmciD9gi3xSg11e-DogY",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Order/Orders?id=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Order",
+												"Orders"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Order/Orders?id=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Order",
+														"Orders"
+													],
+													"query": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"orders\": [\n      {\n        \"id\": \"<integer>\",\n        \"code\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"userId\": \"<long>\",\n        \"itemId\": \"<long>\",\n        \"quantity\": \"<integer>\",\n        \"isPaid\": \"<boolean>\",\n        \"onCart\": \"<boolean>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"code\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"userId\": \"<long>\",\n        \"itemId\": \"<long>\",\n        \"quantity\": \"<integer>\",\n        \"isPaid\": \"<boolean>\",\n        \"onCart\": \"<boolean>\"\n      }\n    ]\n  },\n  {\n    \"orders\": [\n      {\n        \"id\": \"<integer>\",\n        \"code\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"userId\": \"<long>\",\n        \"itemId\": \"<long>\",\n        \"quantity\": \"<integer>\",\n        \"isPaid\": \"<boolean>\",\n        \"onCart\": \"<boolean>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"code\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"userId\": \"<long>\",\n        \"itemId\": \"<long>\",\n        \"quantity\": \"<integer>\",\n        \"isPaid\": \"<boolean>\",\n        \"onCart\": \"<boolean>\"\n      }\n    ]\n  }\n]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Order",
+							"item": [
+								{
+									"name": "/api/Order/Order",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjciLCJGaXJzdE5hbWUiOiJJc2xhbSIsIkxhc3ROYW1lIjoiQW1pbiIsInJvbGUiOiJVc2VyIiwiZXhwIjoxNzA4MzY5MDY0LCJpc3MiOiJTZWN1cmVBcGkiLCJhdWQiOiJTZWN1cmVBcGlVc2VyIn0.YYLA3I5DAA4Vs8Z11Z16j1JYmciD9gi3xSg11e-DogY",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"itemId\": \"5\",\n  \"quantity\": \"2\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Order/Order",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Order",
+												"Order"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"userId\": \"<long>\",\n  \"itemId\": \"<long>\",\n  \"quantity\": \"<integer>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Order/Order",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Order",
+														"Order"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								},
+								{
+									"name": "/api/Order/Order",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJGaXJzdE5hbWUiOiJNb2hhbWVkIiwiTGFzdE5hbWUiOiJSYWFmYXQiLCJyb2xlIjoiQWRtaW4iLCJleHAiOjE3MDgzNjkwOTUsImlzcyI6IlNlY3VyZUFwaSIsImF1ZCI6IlNlY3VyZUFwaVVzZXIifQ.m-Of4eiq8JhHAPSQv57GI74hbSSqVzwGRhE1irax1G8",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Order/Order?id=3",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Order",
+												"Order"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Order/Order?id=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Order",
+														"Order"
+													],
+													"query": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "PayOrder",
+							"item": [
+								{
+									"name": "/api/Order/PayOrder",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjciLCJGaXJzdE5hbWUiOiJJc2xhbSIsIkxhc3ROYW1lIjoiQW1pbiIsInJvbGUiOiJVc2VyIiwiZXhwIjoxNzA4MzY5MDY0LCJpc3MiOiJTZWN1cmVBcGkiLCJhdWQiOiJTZWN1cmVBcGlVc2VyIn0.YYLA3I5DAA4Vs8Z11Z16j1JYmciD9gi3xSg11e-DogY",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Order/PayOrder?id=5",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Order",
+												"PayOrder"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Order/PayOrder?id=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Order",
+														"PayOrder"
+													],
+													"query": [
+														{
+															"key": "id",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Login",
+							"item": [
+								{
+									"name": "/api/User/Login",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": " {\n   \"email\": \"admin@example.com\",\n   \"password\": \"12345678\"\n }\n\n// {\n//   \"email\": \"user1@example.com\",\n//   \"password\": \"12345678\"\n// }\n",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/User/Login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"User",
+												"Login"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"<email>\",\n  \"password\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/User/Login",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"User",
+														"Login"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Register",
+							"item": [
+								{
+									"name": "/api/User/Register",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"Aswan\",\n  \"email\": \"user1@example.com\",\n  \"firstName\": \"Islam\",\n  \"lastName\": \"Amin\",\n  \"password\": \"12345678\",\n  \"phoneNumber\": \"01112581080\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/User/Register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"User",
+												"Register"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"address\": \"<string>\",\n  \"email\": \"<email>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/User/Register",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"User",
+														"Register"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		},
+		{
+			"key": "https://localhost:7136",
+			"value": "baseUrl"
+		},
+		{
+			"key": "baseurl",
+			"value": "https://localhost:7136"
+		}
+	]
+}
