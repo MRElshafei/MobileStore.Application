@@ -47,7 +47,8 @@ namespace Infrastructure
                     ID = 1,
                     FirstName = "Admin",
                     LastName = "User",
-                    Password = "12345678",
+                    //Password = "12345678",
+                    Password = BCrypt.Net.BCrypt.HashPassword("12345678"),
                     Email = "admin@example.com",
                     PhoneNumber = "1234567890",
                     Address = "123 Main St"
