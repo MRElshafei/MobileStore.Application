@@ -2,10 +2,11 @@ Mobile Store
 
 Description
 
-Mobile Store is a web application designed to serve as an online platform for purchasing mobile phones. It provides users with the ability to create accounts, browse available mobile phones, search for specific models, filter by brand, and place orders securely. The application is built using .NET 8 and follows the CQRS (Command Query Responsibility Segregation) architecture along with the Mediator and Repository design patterns for efficient and scalable development.
+Mobile Store is a web application designed to serve as an online platform for purchasing mobile phones. It provides users with the ability to create accounts, browse available mobile phones, search for specific models, filter by brand, and place orders securely. The application is built using .NET 8 and follows the CQRS (Command Query Responsibility Segregation) architecture and Clean Architecture along with the Mediator and Repository design patterns for efficient and scalable development.
 
 Technology
 - .NET 8
+- Clean Architecture 
 - CQRS (Command Query Responsibility Segregation)
 - Mediator Design Pattern
 - Repository Design Pattern
